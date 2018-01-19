@@ -28,6 +28,7 @@ export default class Body extends React.Component{
         setTimeout(// this method only activates 3 seconds after initial rendering
             () => {
                 this.setState({name: this.state.newname}) // this is how to change state. Here, I am changing my name to the newname variable in state
+                this.props.changeName("Geoff"); // Here, we call the changeName func passed in props, but because it's bound to Layout, it changes the name in Layout.js!
                 // setState() causes a rerender, so we can't call it within the render method (infinite loop!)
                 // NB: putting this method in Layout.js causes the console log in Header.js to get called again!
                 // I assume it's because Header.js is a child (rendered through Layout's render())?
