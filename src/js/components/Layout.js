@@ -27,7 +27,7 @@ export default class Layout extends React.Component{ // Everything is a componen
                 <Header title = {injectHeader}/> {/* This is coming from the Header.js component. Also, this is how to comment within the render() method */}
                 {/*in the above header, we are sending variable data to the Header component, to be accessed in Header.js with "this.props"*/}
                 {/*title is automatically converted to an object when passed through*/}
-                <h1>{this.state.name}</h1>
+                <h1 style={{float:"left", padding:"0px 5px 0px 0px"}}>{this.state.name} </h1> {/*float allows */}
                 <Body changeName = {this.changeName.bind(this)}/> {/*sending the changeName function to Body.js as a prop*/}
                 {/*The reason we bind(this) is so that when the func is called in body.js, it executes in the context of THIS Layout.js*/}
                 {/*This means that no matter who calls the changeName func, it will change the name in the Layout component!*/}
