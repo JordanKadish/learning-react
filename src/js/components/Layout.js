@@ -32,7 +32,6 @@ export default class Layout extends React.Component{ // Everything is a componen
                 {/*The reason we bind(this) is so that when the func is called in body.js, it executes in the context of THIS Layout.js*/}
                 {/*This means that no matter who calls the changeName func, it will change the name in the Layout component!*/}
                 <Footer/>
-            }
             </div>
             // in js, we can do stuff like 'var div = document.createElement("div")'
             // this allows stuff like "div.innerHTML" for example. But this is effort, so react allows us to type native HTML as above
